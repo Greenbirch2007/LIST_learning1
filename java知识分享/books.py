@@ -6,8 +6,8 @@ import pymysql
 import requests
 from lxml import etree
 from selenium import webdriver
-
 driver = webdriver.Chrome()
+
 
 def get_one_page(url):
 
@@ -15,16 +15,23 @@ def get_one_page(url):
     html = driver.page_source
     return html
 
+    # try:
+    #     response = requests.get(url)
+    #     if response.status_code == 200:
+    #         return response.text
+    #     return None
+    # except :
+    #     return None
 
 def parse_page(html):
     selector = etree.HTML(html)
-    title = selector.xpath('//*[@id="fontzoom"]/ul/li/a/text()')
-    links = selector.xpath('//*[@id="fontzoom"]/ul/li/a/@href')
-    desc_contents = selector.xpath('//*[@id="fontzoom"]/ul/li/div/p[1]/text()')
+    title = selector.xpath('/html/body/div[4]/div[1]/div[2]/ul/li/a[2]/text()')
+    links = selector.xpath('/html/body/div[4]/div[1]/div[2]/ul/li/a[2]/@href')
 
-    for i1,i2,i3 in zip(title,links,desc_contents):
-        big_list.append((i1,i2,i3))
+    for i1,i2 in zip(title,links):
+        big_list.append((i1,'http://www.java1234.com'+i2))
     return big_list
+
 
 
 
@@ -35,7 +42,7 @@ def insertDB(content):
     cursor = connection.cursor()
     # 这里是判断big_list的长度，不是content字符的长度
     try:
-        cursor.executemany('insert into java1 (title,links,desc_contents) values (%s,%s,%s)', content)
+        cursor.executemany('insert into javaShare_book (title,links) values (%s,%s)', content)
         connection.commit()
         connection.close()
         print('向MySQL中添加数据成功！')
@@ -46,21 +53,22 @@ def insertDB(content):
 
 if __name__ == "__main__":
     big_list = []
-    for item in range(1,1736):
-        url = 'https://www.2cto.com/kf/ware/java/news/'+ str(item) + '.html'
+    for item in range(218,297):
+        url = 'http://www.java1234.com/a/javabook/javabase/list_65_'+str(item)+'.html'
         html = get_one_page(url)
-        time.sleep(1)
         content = parse_page(html)
         insertDB(content)
+        # time.sleep(1)
 
 
 
-# create table java1(
+
+#
+# create table javaShare_book(
 # id int not null primary key auto_increment,
 # title text,
-# links text,
-# desc_contents text
+# links text
 # ) engine=InnoDB  charset=utf8;
 
 
-# drop  table java1;
+# drop  table R_links;
