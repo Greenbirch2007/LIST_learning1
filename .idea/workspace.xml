@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6b1fcbd0-f720-443a-bb8f-5d5f23fd3120" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/LIST_learning1.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/LIST_learning1.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -33,7 +31,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.jQuerydataTable_Servers_BD">
+  <component name="RunManager" selected="Python.bootstrap-table-datesearch_BD">
     <configuration name="books" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="LIST_learning1" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -47,6 +45,27 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/java知识分享/books.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="bootstrap-table-datesearch_BD" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="LIST_learning1" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/bootstrap-tabler日期搜索(百度爬虫)" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/bootstrap-tabler日期搜索(百度爬虫)/bootstrap-table-datesearch_BD.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -99,6 +118,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.bootstrap-table-datesearch_BD" />
         <item itemvalue="Python.jQuerydataTable_Servers_BD" />
         <item itemvalue="Python.books" />
         <item itemvalue="Python.java1" />
